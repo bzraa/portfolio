@@ -11,12 +11,7 @@ class Portfolio extends Component {
       let projectImage = "images/portfolio/" + projects.image;
 
       return (
-        <div key={id++} className="columns portfolio-item">
-          <div className="item-wrap">
-            <Zmage alt={projects.title} src={projectImage} />
-            <div style={{ textAlign: "center" }}>{projects.title}</div>
-          </div>
-        </div>
+        <img id="portfolio-img"alt={projects.title} src={projectImage}/>
       );
     });
 
@@ -27,12 +22,7 @@ class Portfolio extends Component {
             <div className="twelve columns collapsed">
               <h1>Check Out Some of My Works.</h1>
 
-              <div
-                id="portfolio-wrapper"
-                className="bgrid-quarters s-bgrid-thirds cf"
-              >
-                {projects}
-              </div>
+              <marquee id="marquee" behavior="scroll" scrollamount="15">{projects}</marquee>
             </div>
           </div>
         </Fade>

@@ -135,36 +135,41 @@ header .scrolldown a:hover { color: #0762f9; }
    left: 0;
    top: 0;
 }
-.opaque { background-color: #333; }
+.opaque { background-color: rgb(255, 255, 255); }
 
 /* hide toggle button */
 #nav-wrap > a.mobile-btn { display: none; }
-
+ul#nav img {
+   vertical-align: middle;
+   
+}
 ul#nav {
    min-height: 48px;
    width: auto;
 
    /* center align the menu */
    text-align: center;
+   vertical-align: middle;
 }
 ul#nav li {
    position: relative;
    list-style: none;
-   height: 48px;
+   height: 55px;
    display: inline-block;
+   
 }
 
 /* Links */
 ul#nav li a {
 
 /* 8px padding top + 8px padding bottom + 32px line-height = 48px */
-
+   vertical-align: middle;
    display: inline-block;
    padding: 8px 13px;
    line-height: 32px;
 	text-decoration: none;
    text-align: left;
-   color: #fff;
+   color: rgb(255, 108, 108);
 
 	-webkit-transition: color .2s ease-in-out;
 	-moz-transition: color .2s ease-in-out;
@@ -174,7 +179,7 @@ ul#nav li a {
 }
 
 ul#nav li a:active { background-color: transparent !important; }
-ul#nav li.current a { color: #fe6928; }
+ul#nav li.current a { color: #ff0000; }
 
 
 /* ------------------------------------------------------------------ */
@@ -182,14 +187,14 @@ ul#nav li.current a { color: #fe6928; }
 /* ------------------------------------------------------------------ */
 
 #about {
-   background: #000524;
+   background: #f7444e;
    padding-top: 96px;
    padding-bottom: 66px;
    overflow: hidden;
 }
 
 #about a, #about a:visited  { color: #fff; }
-#about a:hover, #about a:focus { color: #0762f9; }
+#about a:hover, #about a:focus { color: #000000; }
 
 #about h2 {
    font: 22px/30px 'opensans-bold', sans-serif;
@@ -198,7 +203,7 @@ ul#nav li.current a { color: #fe6928; }
 }
 #about p {
    line-height: 30px;
-   color: #ccc;
+   color: rgb(255, 255, 255);
 }
 #about .profile-pic {
    position: relative;
@@ -246,7 +251,7 @@ ul#nav li.current a { color: #fe6928; }
    letter-spacing: 1px;
 }
 #resume h1 span {
-   border-bottom: 3px solid #0762f9;
+   border-bottom: 3px solid #f7444e;
    padding-bottom: 6px;
 }
 #resume h3 {
@@ -410,7 +415,14 @@ ul#nav li.current a { color: #fe6928; }
 /* ------------------------------------------------------------------ */
 /* e. Portfolio Section
 /* ------------------------------------------------------------------ */
-
+#marquee {
+   box-sizing: border-box;
+   flex: 0 0 16vw;
+   margin: 0 1vw;
+}
+#portfolio-img {
+   max-width: fit-content;
+}
 #portfolio {
    background: #ebeeee;
    padding-top: 90px;
@@ -426,7 +438,7 @@ ul#nav li.current a { color: #fe6928; }
 }
 
 /* Portfolio Content */
-#portfolio-wrapper .columns { margin-bottom: 36px; }
+/* #portfolio-wrapper .columns { margin-bottom: 36px; } */
 .portfolio-item .item-wrap {
    background: #fff;
    overflow: hidden;
@@ -789,14 +801,14 @@ call-to-action .button {
 /* ------------------------------------------------------------------ */
 
 #contact {
-   background: #191919;
+   background: #f7444e;
    padding-top: 96px;
    padding-bottom: 102px;
-   color: #636363;
+   color: #ffffff;
 }
 #contact .section-head { margin-bottom: 42px; }
 
-#contact a, #contact a:visited  { color: #0762f9; }
+#contact a, #contact a:visited  { color: #ff0000; }
 #contact a:hover, #contact a:focus { color: #fff; }
 
 #contact h1 {
@@ -844,8 +856,8 @@ call-to-action .button {
 #contact textarea,
 #contact select {
    padding: 10px 20px;
-	color: #eee;
-	background: #373233;
+	color: rgb(0, 0, 0);
+	background: #ffffff;
 	margin-bottom: 42px;
 	border: 0;
 	outline: none;
@@ -856,8 +868,8 @@ call-to-action .button {
 #contact input:focus,
 #contact textarea:focus,
 #contact select:focus {
-	color: #fff;
-	background-color: #0762f9;
+	color: rgb(0, 0, 0);
+	background-color: #ffffff;
 }
 #contact button.submit {
 	text-transform: uppercase;
@@ -876,7 +888,7 @@ call-to-action .button {
 	background: #fff;
 }
 #contact span.required {
-	color: #0762f9;
+	color: #f7444e;
 	font-size: 13px;
 }
 #message-warning, #message-success {
